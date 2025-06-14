@@ -36,7 +36,6 @@ void main() {
     }
   }
 
-  // Main application loop
   while (authService.isLoggedIn) {
     ConsoleUtils.clearScreen();
     print('School Record Management System');
@@ -112,7 +111,6 @@ void _updateStudentMenu(SchoolRecordService service) {
 
   final id = ConsoleUtils.readString('Enter student ID to update: ');
 
-  // Use the new public method
   final student = service.getStudent(id);
   if (student == null) {
     print('Student not found.');
